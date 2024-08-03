@@ -16,6 +16,7 @@ from graphrag.llm import (
     LLMCache,
     LLMLimiter,
     MockCompletionLLM,
+    DashScopeEmbeddingLLM,
     OpenAIConfiguration,
     create_openai_chat_llm,
     create_openai_client,
@@ -94,6 +95,13 @@ def _create_error_handler(callbacks: VerbCallbacks) -> ErrorHandlerFn:
 
     return on_error
 
+def _load_dashscope_embeddings_llm(
+    on_error: ErrorHandlerFn,
+    cache: LLMCache,
+    config: dict[str, Any],
+    azure=False,
+): 
+    return DashScopeEmbeddingLLM(config)
 
 def _load_openai_completion_llm(
     on_error: ErrorHandlerFn,
@@ -226,6 +234,10 @@ loaders = {
     LLMType.AzureOpenAIChat: {
         "load": _load_azure_openai_chat_llm,
         "chat": True,
+    },
+    LLMType.DashScopeEmbedding: {
+        "load": _load_dashscope_embeddings_llm,
+        "chat": False,
     },
     LLMType.OpenAIEmbedding: {
         "load": _load_openai_embeddings_llm,
