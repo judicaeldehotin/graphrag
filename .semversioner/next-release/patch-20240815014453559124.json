@@ -1,0 +1,4 @@
+{
+  "type": "patch",
+  "description": "Enhanced the logic for loading configuration files during API calls (now initialized only once)"
+}
