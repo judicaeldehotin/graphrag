@@ -30,6 +30,33 @@ To learn more about GraphRAG and how it can be used to enhance your LLM's abilit
 
 To get started with the GraphRAG system we recommend trying the [Solution Accelerator](https://github.com/Azure-Samples/graphrag-accelerator) package. This provides a user-friendly end-to-end experience with Azure resources.
 
+## API USAGE
+
+### Directory Initialization
+
+```python
+from graphrag.index.api import GraphRagIndexer
+indexer = GraphRagIndexer(root="ragtest", init=True)
+indexer.run()
+```
+
+### Index Initialization
+
+```python
+from graphrag.index.api import GraphRagIndexer
+indexer = GraphRagIndexer(root="ragtest")
+indexer.run()
+```
+
+### Search Test
+
+```python
+from ragtest.graphrag_test import SearchRunner
+searcher = SearchRunner(root_dir="ragtest")
+searcher.run_local_search(query="hi")  # poetry run poe query --method local --root ragtest "hi"
+searcher.run_global_search(query="hi")  # poetry run poe query --method local --root ragtest "hi"
+```
+
 ## Repository Guidance
 
 This repository presents a methodology for using knowledge graph memory structures to enhance LLM outputs. Please note that the provided code serves as a demonstration and is not an officially supported Microsoft offering.
