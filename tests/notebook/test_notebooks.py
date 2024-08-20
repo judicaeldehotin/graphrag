@@ -2,21 +2,23 @@
 # Licensed under the MIT License
 import subprocess
 import tempfile
+import os
 from pathlib import Path
 
 import nbformat
 import pytest
 
-DOCS_PATH = Path("../../docsite")
+NOTEBOOKS_PATH = Path("examples_notebooks")
 
-notebooks_list = list(DOCS_PATH.rglob("*.ipynb"))
+notebooks_list = list(NOTEBOOKS_PATH.rglob("*.ipynb"))
 
 
 def _notebook_run(filepath: Path):
     """Execute a notebook via nbconvert and collect output.
     :returns execution errors
     """
-    with tempfile.NamedTemporaryFile(suffix=".ipynb") as temp_file:
+
+    with tempfile.NamedTemporaryFile(suffix=".ipynb", dir=os.environ.get("TMP")) as temp_file:
         args = [
             "jupyter",
             "nbconvert",
