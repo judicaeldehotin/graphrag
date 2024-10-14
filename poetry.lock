@@ -2173,17 +2173,17 @@ files = [
 
 [[package]]
 name = "lancedb"
-version = "0.11.0"
+version = "0.14.0"
 description = "lancedb"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "lancedb-0.11.0-cp38-abi3-macosx_10_15_x86_64.whl", hash = "sha256:11d56c26cd3c7db3757dd29e67f2bbe6d997f39cf4389cc56c7399ffec018fbb"},
-    {file = "lancedb-0.11.0-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:3e8da024de348dd08f2fdf72063349ca0eece2d66a58bba723adc36af957979a"},
-    {file = "lancedb-0.11.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c954dc44ede89d775159f42844f1862a18dde80c616b7bd7b5eb7c98217d0328"},
-    {file = "lancedb-0.11.0-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:fe76f0fcdc44203cfc5c0153fb4cf882a64678935ae9280a9751c64d07b04f4d"},
-    {file = "lancedb-0.11.0-cp38-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:911277e45c3ee57c650fddeb4c85669fb1377103c3992ae73a6c681f4a1d68f0"},
-    {file = "lancedb-0.11.0-cp38-abi3-win_amd64.whl", hash = "sha256:1a7b0c7fc3383f947a52e0692c36a6351dd0c841dd012071bfba66044c95b22a"},
+    {file = "lancedb-0.14.0-cp38-abi3-macosx_10_15_x86_64.whl", hash = "sha256:6b970e6f503464918789d76c43d70d93d85ef82dc6dbec9685483c60c36ba491"},
+    {file = "lancedb-0.14.0-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:e28932882a0f893a295b391b05b0af9d95918e2cd10d6d58991e3282c06c0bd3"},
+    {file = "lancedb-0.14.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:faef7fe76af9373656660e2e652e3d330735e84680649f0d74c558a0460f0d55"},
+    {file = "lancedb-0.14.0-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:777e2d483f13814a2a5624c6824936f400aeab52b961853f1352cc21564f7d6f"},
+    {file = "lancedb-0.14.0-cp38-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:31fec6c05edf657542d91c396b895b2ba02f0e6114188ea9bb03a3112907a71e"},
+    {file = "lancedb-0.14.0-cp38-abi3-win_amd64.whl", hash = "sha256:a4e758156554e2a2a493ad569278d8f938e209f38f215924ed1c5f368d1f402e"},
 ]
 
 [package.dependencies]
@@ -2193,8 +2193,7 @@ deprecation = "*"
 overrides = ">=0.7"
 packaging = "*"
 pydantic = ">=1.10"
-pylance = "0.15.0"
-ratelimiter = ">=1.0,<2.0"
+pylance = "0.18.2"
 requests = ">=2.31.0"
 retry = ">=0.9.2"
 tqdm = ">=4.27.0"
@@ -2204,8 +2203,8 @@ azure = ["adlfs (>=2024.2.0)"]
 clip = ["open-clip", "pillow", "torch"]
 dev = ["pre-commit", "ruff"]
 docs = ["mkdocs", "mkdocs-jupyter", "mkdocs-material", "mkdocstrings[python]"]
-embeddings = ["awscli (>=1.29.57)", "boto3 (>=1.28.57)", "botocore (>=1.31.57)", "cohere", "google-generativeai", "huggingface-hub", "instructorembedding", "ollama", "open-clip-torch", "openai (>=1.6.1)", "pillow", "sentence-transformers", "torch"]
-tests = ["aiohttp", "boto3", "duckdb", "pandas (>=1.4)", "polars (>=0.19)", "pytest", "pytest-asyncio", "pytest-mock", "pytz", "tantivy"]
+embeddings = ["awscli (>=1.29.57)", "boto3 (>=1.28.57)", "botocore (>=1.31.57)", "cohere", "google-generativeai", "huggingface-hub", "ibm-watsonx-ai (>=1.1.2)", "instructorembedding", "ollama", "open-clip-torch", "openai (>=1.6.1)", "pillow", "sentence-transformers", "torch"]
+tests = ["aiohttp", "boto3", "duckdb", "pandas (>=1.4)", "polars (>=0.19,<=1.3.0)", "pytest", "pytest-asyncio", "pytest-mock", "pytz", "tantivy"]
 
 [[package]]
 name = "linkify-it-py"
@@ -3546,17 +3545,17 @@ tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
 name = "pylance"
-version = "0.15.0"
+version = "0.18.2"
 description = "python wrapper for Lance columnar format"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "pylance-0.15.0-cp39-abi3-macosx_10_15_x86_64.whl", hash = "sha256:c61b1e3532fa481505cf04197fc3e38f1f2169d724c9eaa889f3acbae183db41"},
-    {file = "pylance-0.15.0-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:12f1ce4c47cf78b720d62667297e956a593430fe4a7559988c0436d27e58f2b6"},
-    {file = "pylance-0.15.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8821c2cffeb6c273833edf7e3777de8e9f93a014a50a347a87e11c5b743f82fe"},
-    {file = "pylance-0.15.0-cp39-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:225df36e231f70b1c15df89c8c3ccc82f9dc7f443ebd24c2c808eac86ed99ed5"},
-    {file = "pylance-0.15.0-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:fbce3e07c33e3d30dd07593cfda4e185e1a08fa75fdc3ae4dcd2941ce7137714"},
-    {file = "pylance-0.15.0-cp39-abi3-win_amd64.whl", hash = "sha256:0260f4f93811c3888440412b6c7c071cc8fd22ac1a8b323472f919952926df2a"},
+    {file = "pylance-0.18.2-cp39-abi3-macosx_10_15_x86_64.whl", hash = "sha256:017422b058724dfbe8426c1ac42f0ede77324f3783e177cb4239dc034758b50b"},
+    {file = "pylance-0.18.2-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:c4c4049eb6a6075cef721a20dd28ccba6d89b66f13e8d20ef65a284ae1c02e30"},
+    {file = "pylance-0.18.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:89dcf2dadee940ea86ac0b3bf7ba81c68e9774a449d8de206bc60cdc8804b853"},
+    {file = "pylance-0.18.2-cp39-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:f37fb7ad0e53076c731014c210a45919f3b2620c967e2f62cf8b7c26fdc9aace"},
+    {file = "pylance-0.18.2-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:a913920f591d8404c46c74e3911fe0c29d47b923b9c3c7e521d3354c1663d812"},
+    {file = "pylance-0.18.2-cp39-abi3-win_amd64.whl", hash = "sha256:72796676d7647ba9f6e86531daf67880f5e69ba8f842e237ad0c1ca419c6378c"},
 ]
 
 [package.dependencies]
@@ -3565,9 +3564,11 @@ pyarrow = ">=12"
 
 [package.extras]
 benchmarks = ["pytest-benchmark"]
+cuvs-cu11 = ["cuvs-cu11", "pylibraft-cu11"]
+cuvs-cu12 = ["cuvs-cu12", "pylibraft-cu12"]
 dev = ["ruff (==0.4.1)"]
 ray = ["ray[data]"]
-tests = ["boto3", "datasets", "duckdb", "h5py (<3.11)", "ml-dtypes", "pandas", "pillow", "polars[pandas,pyarrow]", "pytest", "tensorflow", "tqdm"]
+tests = ["boto3", "datasets", "duckdb", "ml-dtypes", "pandas", "pillow", "polars[pandas,pyarrow]", "pytest", "tensorflow", "tqdm"]
 torch = ["torch"]
 
 [[package]]
@@ -3986,20 +3987,6 @@ packaging = "*"
 
 [package.extras]
 test = ["pytest (>=6,!=7.0.0,!=7.0.1)", "pytest-cov (>=3.0.0)", "pytest-qt"]
-
-[[package]]
-name = "ratelimiter"
-version = "1.2.0.post0"
-description = "Simple python rate limiting object"
-optional = false
-python-versions = "*"
-files = [
-    {file = "ratelimiter-1.2.0.post0-py3-none-any.whl", hash = "sha256:a52be07bc0bb0b3674b4b304550f10c769bbb00fead3072e035904474259809f"},
-    {file = "ratelimiter-1.2.0.post0.tar.gz", hash = "sha256:5c395dcabdbbde2e5178ef3f89b568a3066454a6ddc223b76473dac22f89b4f7"},
-]
-
-[package.extras]
-test = ["pytest (>=3.0)", "pytest-asyncio"]
 
 [[package]]
 name = "referencing"
@@ -5165,4 +5152,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "657679cf3810b8c6d6b06be70113a9557193d131b8e8f903ce7672a0db09af57"
+content-hash = "614a1cc17a0bacbae69095addc498727e0d72383357700ee2b33eafef6c44c6e"
